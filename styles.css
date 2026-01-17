@@ -214,7 +214,7 @@ img {
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 80px;
+    padding-top: 140px;
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-cream) 100%);
     overflow: hidden;
 }
@@ -985,11 +985,11 @@ section {
 
     .hero-image {
         order: -1;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .hero-image img {
-        max-width: 200px;
+        max-width: 300px;
     }
 
     .hero-image .floating {
