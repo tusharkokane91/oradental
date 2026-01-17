@@ -13,6 +13,9 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 
+    // Update mobile menu position based on navbar height
+    updateMobileMenuPosition();
+
     // Back to top button visibility
     if (window.scrollY > 500) {
         backToTop.classList.add('visible');
@@ -23,6 +26,16 @@ window.addEventListener('scroll', () => {
     // Update active nav link based on scroll position
     updateActiveNavLink();
 });
+
+// ===== Update Mobile Menu Position =====
+function updateMobileMenuPosition() {
+    const navbarHeight = navbar.offsetHeight;
+    navMenu.style.top = navbarHeight + 'px';
+}
+
+// Initial call to set menu position
+window.addEventListener('load', updateMobileMenuPosition);
+window.addEventListener('resize', updateMobileMenuPosition);
 
 // ===== Mobile Navigation Toggle =====
 navToggle.addEventListener('click', () => {
