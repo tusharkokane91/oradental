@@ -38,6 +38,14 @@ navLinks.forEach(link => {
     });
 });
 
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+    }
+});
+
 // ===== Update Active Nav Link =====
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');

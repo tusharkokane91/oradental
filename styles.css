@@ -119,8 +119,7 @@ img {
     right: 0;
     z-index: 1000;
     padding: 15px 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--white);
     transition: var(--transition);
 }
 
@@ -133,6 +132,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo img {
@@ -944,21 +944,24 @@ section {
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 160px;
         left: 0;
         right: 0;
         background: var(--white);
         flex-direction: column;
-        padding: 30px;
-        gap: 20px;
-        box-shadow: var(--shadow);
-        transform: translateY(-150%);
+        padding: 20px 30px;
+        gap: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
         opacity: 0;
-        transition: var(--transition);
+        transition: all 0.3s ease;
+        z-index: 999;
     }
 
     .nav-menu.active {
-        transform: translateY(0);
+        max-height: 400px;
+        padding: 20px 30px;
         opacity: 1;
     }
 
