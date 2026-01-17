@@ -825,13 +825,15 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     background: #25D366;
     border-radius: 50%;
     margin-left: 8px;
-    vertical-align: middle;
+    vertical-align: text-bottom;
     text-decoration: none;
+    position: relative;
+    top: -1px;
 }
 
 .developer-credit .dev-whatsapp i {
@@ -844,6 +846,20 @@ section {
     background: #128C7E;
     transform: scale(1.1);
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .developer-credit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .developer-credit .dev-whatsapp {
+        margin-left: 0;
+        margin-top: 5px;
+    }
 }
 
 /* ===== Floating Elements ===== */
@@ -969,10 +985,20 @@ section {
 
     .hero-image {
         order: -1;
+        margin-top: 20px;
     }
 
     .hero-image img {
-        max-width: 250px;
+        max-width: 200px;
+    }
+
+    .hero-image .floating {
+        animation: float-mobile 3s ease-in-out infinite;
+    }
+
+    @keyframes float-mobile {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
     }
 
     .section-header h2 {
