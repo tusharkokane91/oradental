@@ -1,0 +1,31 @@
+# https://oradental.in robots.txt
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# AI Search Crawlers - Allow for visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Block AI training-only crawlers
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://oradental.in/sitemap.xml

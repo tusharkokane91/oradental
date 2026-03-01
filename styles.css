@@ -18,6 +18,25 @@
     --radius-lg: 20px;
 }
 
+/* ===== Skip to Content (Accessibility) ===== */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 0 0 var(--radius) var(--radius);
+    z-index: 10000;
+    font-weight: 500;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
 /* ===== Reset & Base ===== */
 * {
     margin: 0;
